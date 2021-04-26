@@ -1,0 +1,71 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: blueviolet;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+button {
+  padding: 2rem 3rem;
+  background-color: #fff;
+  color: blueviolet;
+  outline: none;
+  border: 0;
+  border-radius: 5px;
+  margin: 2rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+button span {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  background-color: #000;
+  border-radius: 50%;
+  -webkit-animation: ripple 0.3s linear;
+          animation: ripple 0.3s linear;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+          transform: translate(-50%, -50%) scale(0);
+  opacity: 0.6;
+}
+
+@-webkit-keyframes ripple {
+  to {
+    -webkit-transform: translate(-50%, -50%) scale(3);
+            transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+  }
+}
+
+@keyframes ripple {
+  to {
+    -webkit-transform: translate(-50%, -50%) scale(3);
+            transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+  }
+}
